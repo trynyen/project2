@@ -1,24 +1,56 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+
+  // ---------------- GET -------------------
+  // Get all Meals
+  app.get("/api/meals", function(req, res) {
+    db.Meal.findAll({}).then(function(dbMeals) {
+      res.json(dbMeals);
     });
   });
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+
+  // Account Info
+  app.get("/api/user/:id", function(req, res) {
+
+  });
+
+
+  // Logout
+  app.get("/logout", function(req, res) {
+
+  });
+
+
+  // ---------------- POST -------------------
+  // Login
+  app.get("/api/login", function(req, res) {
+
+  });
+
+  
+  // Signup
+  app.get("/api/login", function(req, res) {
+
+  });
+
+
+  // Create a new Meal
+  app.post("/api/meals", function(req, res) {
+    db.Meal.create({
+
+    }).then(function(dbMeals) {
+      res.json(dbMeals);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+
+  // Delete a Meal
+  app.delete("/api/meals/:id", function(req, res) {
+    db.Meal.destroy({ where: { id: req.params.id } }).then(function(dbMeals) {
+      res.json(dbMeals);
     });
   });
 };
+

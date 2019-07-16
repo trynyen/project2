@@ -1,24 +1,40 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
+
+
+  // Redirects to Signup page (if logged in, redirects to '/home')
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+
+  });
+
+
+  // Redirects to login page
+  app.get("/login", function(req, res) {
+
+  });
+
+
+  // Shows make a meal form AND eat a meal button
+  app.get("/home", function(req, res) {
+    
+  });
+
+
+  // List of Meal
+  app.get("/meal", function(req, res) {
+    db.Meals.findAll({}).then(function(dbMeals) {
+        res.json(dbMeal);
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+
+  // List of users activiy (either make or eat a meal)
+  app.get("/member", function(req, res) {
+    db.User.findAll({}).then(function(dbMeals))
   });
+
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
