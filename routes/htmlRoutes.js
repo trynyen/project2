@@ -2,17 +2,20 @@ var db = require("../models");
 var isAuthenticated = require("../config/middleware/isAuthenticated"); 
 
 module.exports = function(app) {
-  // Load index page
 
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
+  // Shows make a meal form AND eat a meal button
+  app.get("/home", function(req, res) {
+    
+  });
+
+
+  // List of Meal
+  app.get("/meal", function(req, res) {
+    db.Meals.findAll({}).then(function(dbMeals) {
+        res.json(dbMeal);
       });
     });
-  });
 
   app.get("/logout", function(req, res) {
     req.logout();
@@ -25,11 +28,19 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.User.findAll({}).then(function(dbExamples) {
       res.render("index", {
-        msg: "Welcome!",
         examples: dbExamples
       });
     });
   });
+
+  // List of users activiy (either make or eat a meal)
+  app.get("/member", function(req, res) {
+    db.User.findAll({}).then(function(dbMeals){
+      res.json(dbMeals);
+    })
+  });
+
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     res.render("404");

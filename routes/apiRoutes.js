@@ -4,29 +4,14 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
   app.get("/secrets", isAuthenticated, function(req, res) {
-    // res.send("SECRETS!!!");
-    // res.send("secrets");
     res.json(req.user);
-    // res.render("example");
   });
 
   app.get("/home", isAuthenticated, function(req, res) {
     res.render("home")
   });
 
-  // Get all examples
-  app.get("/api/meals", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
 
-  // Create a new example
-  app.post("/api/meals", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
 
   app.post("/api/register", function(req, res) {
     db.User.create({
@@ -34,6 +19,43 @@ module.exports = function(app) {
       password: req.body.password
     }).then(function(dbUser) {
       res.json(dbUser);
+    });
+  });
+  // ---------------- GET -------------------
+  // Get all Meals
+  app.get("/api/meals", function(req, res) {
+    db.Meal.findAll({}).then(function(dbMeals) {
+      res.json(dbMeals);
+    });
+  });
+
+
+  // Account Info
+  app.get("/api/user/:id", function(req, res) {
+
+  });
+
+
+
+
+  // ---------------- POST -------------------
+
+
+
+  // Create a new Meal
+  app.post("/api/meals", function(req, res) {
+    db.Meal.create({
+
+    }).then(function(dbMeals) {
+      res.json(dbMeals);
+    });
+  });
+
+
+  // Delete a Meal
+  app.delete("/api/meals/:id", function(req, res) {
+    db.Meal.destroy({ where: { id: req.params.id } }).then(function(dbMeals) {
+      res.json(dbMeals);
     });
   });
 
@@ -60,10 +82,5 @@ module.exports = function(app) {
       res.json(dbUsers);
     });
   });
-  // Delete an example by id
-//   app.delete("/api/examples/:id", function(req, res) {
-//     db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-//       res.json(dbExample);
-//     });
-//   });
-};
+
+} 
