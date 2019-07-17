@@ -1,8 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "root",
+    "database": "meals_db",
+
+
     "host": "localhost",
     "dialect": "mysql"
   },
