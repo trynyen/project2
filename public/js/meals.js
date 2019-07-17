@@ -6,4 +6,4 @@ $(".meal-option").on("click", function(){
   // $.put('api/meals', quantity, function(meal) {
   //   console.log(meal)
   // })
-}) 
+}); 

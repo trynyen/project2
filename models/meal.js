@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
 
   Meal.associate = function (models) {
     models.Meal.belongsTo(models.User, {
-      foreignKey: 'userId',
+      foreignKey: "userId",
       allowNull: false
     });
   };

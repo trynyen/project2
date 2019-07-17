@@ -1,4 +1,3 @@
-
 console.log("index js was called");
 
 var postLogIn = function () {
@@ -8,12 +7,13 @@ var postLogIn = function () {
   $.post("/api/login", {
     email: email,
     password: password
-  }, function(user){
-    console.log(user)
+  }, function(user) { 
+    console.log(user);
     window.location.href = "/home";
-  })
-  
-}
+  });
+};
+
+$("#submit").on("click", postLogIn);
 // =======
 // // Get references to page elements
 // var $exampleText = $("#example-text");
@@ -83,14 +83,5 @@ var postLogIn = function () {
 // >>>>>>> master:public/js/home.js
 //   });
 // }
-
-
-$("#submit").on("click", postLogIn);
-
-
-
-// // Add event listeners to the submit and delete buttons
-// $submitBtn.on("click", handleFormSubmit);
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 
