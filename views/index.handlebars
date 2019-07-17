@@ -1,10 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="./styles/styles.css">
+<nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
+    </div>
+    
+</nav>
+{{!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a> --}}
 
-email:
+  <!-- Modal Structure -->
+  
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Log In</h4>
+    email:
+        <input type="text" id="email">
+    password:
+        <input type="text" id="password">
+
+    {{!-- <button type="submit" id="submit">Log In</button> --}}
+    </div>
+    <div class="modal-footer">
+    <button data-target="modal1" type="submit" class="btn modal-trigger" id="submit">Submit</button>
+      {{!-- <button type="submit" id="submit">Log In</button> --}}
+    </div>
+  </div>
+  
+  
+{{!-- email:
 <input type="text" id="email">
 password:
 <input type="text" id="password">
 
-<button type="submit" id="submit">Log In</button>
-
+<button type="submit" id="submit">Log In</button> --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>

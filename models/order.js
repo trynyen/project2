@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
 
   Order.associate = function (models) {
     models.Order.belongsTo(models.Meal, {
-      foreignKey: 'mealId',
+      foreignKey: "mealId",
       allowNull: false
     });
   };
