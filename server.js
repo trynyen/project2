@@ -1,9 +1,9 @@
 //dotenv for secured data
 require("dotenv").config();
 var express = require("express");
-var session = require("express-session")
+var session = require("express-session");
 var exphbs = require("express-handlebars");
-var passport = require("./config/passport")
+var passport = require("./config/passport");
 
 var db = require("./models");
 
