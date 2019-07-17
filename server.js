@@ -1,7 +1,9 @@
 //dotenv for secured data
 require("dotenv").config();
 var express = require("express");
+var session = require("express-session")
 var exphbs = require("express-handlebars");
+var passport = require("./config/passport")
 
 var db = require("./models");
 
@@ -12,6 +14,10 @@ var PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+
+app.use(session({secret: "keyboard dog", resave: true, saveUninitialized: true}));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Handlebars
 app.engine(

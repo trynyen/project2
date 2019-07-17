@@ -1,18 +1,7 @@
 var db = require("../models");
+var isAuthenticated = require("../config/middleware/isAuthenticated"); 
 
 module.exports = function(app) {
-
-
-  // Redirects to Signup page (if logged in, redirects to '/home')
-  app.get("/", function(req, res) {
-
-  });
-
-
-  // Redirects to login page
-  app.get("/login", function(req, res) {
-
-  });
 
 
   // Shows make a meal form AND eat a meal button
@@ -27,12 +16,28 @@ module.exports = function(app) {
         res.json(dbMeal);
       });
     });
-  });
 
+  app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/");
+  });
+  // app.get("/secrets", isAuthenticated, function(req, res) {
+  //   // res.send("SECRETS!!!");
+  //   res.render("example");
+  // })
+  app.get("/", function(req, res) {
+    db.User.findAll({}).then(function(dbExamples) {
+      res.render("index", {
+        examples: dbExamples
+      });
+    });
+  });
 
   // List of users activiy (either make or eat a meal)
   app.get("/member", function(req, res) {
-    db.User.findAll({}).then(function(dbMeals))
+    db.User.findAll({}).then(function(dbMeals){
+      res.json(dbMeals);
+    })
   });
 
 
