@@ -26,9 +26,9 @@ module.exports = function(app) {
   //   res.render("example");
   // })
   app.get("/", function(req, res) {
-    db.User.findAll({}).then(function(dbExamples) {
+    db.User.findAll({}).then(function(dbMeals) {
       res.render("index", {
-        examples: dbExamples
+        Meals: dbMeals
       });
     });
   });
