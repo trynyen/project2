@@ -113,4 +113,20 @@ module.exports = function (app) {
     });
   });
 
+}
+
+
+app.put("/api/meals", function(req, res) {
+  db.quantity.update({
+    //thepart you are updating
+    quantity: req.body.quantity--
+  },{
+    //where you want to update
+    where: {
+      id: req.body.id
+    }
+  }).then(function(dbQuantity) {
+    res.render("meals", dbQuantity);
+  });
+});
 }; 
