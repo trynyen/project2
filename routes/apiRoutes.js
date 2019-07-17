@@ -8,9 +8,16 @@ module.exports = function(app) {
   });
 
   app.get("/home", isAuthenticated, function(req, res) {
-    res.render("home")
+    res.render("home");
   });
 
+  app.get("/meals", isAuthenticated, function(req, res){
+    res.render("meals");
+  })
+
+  app.get("/make", isAuthenticated, function(req, res){
+    res.render("make");
+  })
 
 
   app.post("/api/register", function(req, res) {
