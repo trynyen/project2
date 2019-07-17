@@ -2,7 +2,10 @@ module.exports = function(sequelize, DataTypes) {
   var Meal = sequelize.define("Meal", {
     name: DataTypes.STRING,
     quantity: DataTypes.INTEGER,
+    zip: DataTypes.STRING,
+    phone: DataTypes.STRING,
     image: DataTypes.STRING,
+    
     
   });
 

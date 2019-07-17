@@ -12,13 +12,19 @@ module.exports = function(app) {
   });
 
   app.get("/meals", isAuthenticated, function(req, res){
-    res.render("meals");
+    db.Meal.findAll({}).then(function(dbMeals) {
+
+  
+      res.render("meals", {dbMeals});
+    });
+    
   })
 
   app.get("/make", isAuthenticated, function(req, res){
     res.render("make");
   })
 
+  // app.put
 
   app.post("/api/register", function(req, res) {
     db.User.create({
@@ -32,6 +38,8 @@ module.exports = function(app) {
   // Get all Meals
   app.get("/api/meals", function(req, res) {
     db.Meal.findAll({}).then(function(dbMeals) {
+
+  
       res.json(dbMeals);
     });
   });
@@ -51,11 +59,23 @@ module.exports = function(app) {
 
   // Create a new Meal
   app.post("/api/meals", function(req, res) {
-    db.Meal.create({
+    var meal = {
+      "name": req.body.name,
+      "quantity": req.body.quantity,
+      "zip" : req.body.zip,
+      "phone" : req.body.phone,
+      "userId" : req.user.id
+    }
+    // console.log(req.body);
+    // console.log(req.user.id);
+    // res.end();
 
-    }).then(function(dbMeals) {
+    db.Meal.create(meal).then(function(dbMeals) {
       res.json(dbMeals);
     });
+
+
+
   });
 
 
@@ -67,6 +87,7 @@ module.exports = function(app) {
   });
 
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
+    console.log("api log in was called");
     // db.User.findOne({
     //   where: {
     //     email: req.body.email
