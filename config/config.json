@@ -3,8 +3,6 @@
     "username": "root",
     "password": "Pickles9)",
     "database": "meals_db",
-
-
     "host": "localhost",
     "dialect": "mysql"
   },

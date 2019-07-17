@@ -1,24 +1,24 @@
 {
-  "name": "node-handlebars-boilerplate",
+  "name": "GP2",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "A repository for starting project 2 - [X] Copy this template",
   "main": "server.js",
-  "scripts": {
-    "start": "node server.js",
-    "lint": "eslint --quiet .",
-    "fix": "eslint --fix .",
-    "test": "npm run lint && cross-env NODE_ENV=test mocha --reporter spec --exit"
+  "directories": {
+    "test": "test"
   },
-  "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "express-session": "^1.16.2",
+    "materialize-css": "^1.0.0-rc.2",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+<<<<<<< HEAD
+    "sequelize": "^5.10.1"
+=======
     "sequelize": "^5.8.6"
   },
   "devDependencies": {
@@ -30,9 +30,12 @@
     "eslint-plugin-prettier": "^3.1.0",
     "mocha": "^6.1.4",
     "prettier": "^1.17.1"
+>>>>>>> a388ed15f7df966c386d1b75818a66fedede5fd9
   },
-  "directories": {
-    "test": "test"
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -40,6 +43,7 @@
   },
   "keywords": [],
   "author": "",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/trynyen/project2/issues"
   },
