@@ -52,7 +52,9 @@ module.exports = function(app) {
   // Create a new Meal
   app.post("/api/meals", function(req, res) {
     db.Meal.create({
-
+      name: req.body.name,
+      quantity: req.body.quantity,
+      created_at: req.body.created_at
     }).then(function(dbMeals) {
       res.json(dbMeals);
     });
