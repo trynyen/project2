@@ -5,7 +5,7 @@
 
 
 *{box-sizing:border-box}
-body {
+.body1 {
   margin: 0;
   background: rgb(109, 132, 207);
   height: 100vh;
@@ -158,7 +158,7 @@ body {
   transform: rotateY(180deg) translateX(100%);
   cursor: pointer;
 }
-ul {
+/* ul {
   margin: 0;
   width: 100%;
   list-style: none;
@@ -171,8 +171,8 @@ ul:after {
   content: '';
   display: table;
   clear: both;
-}
-li {
+} */
+/* li {
   width: 31.3333333333%;
   margin: 0 1%;
   float: left;
@@ -199,7 +199,7 @@ li:before {
 }
 li:nth-child(1):before {content: "\f095"}
 li:nth-child(2):before {content: "\f003"}
-li:nth-child(3):before {content: "\f0c1"}
+li:nth-child(3):before {content: "\f0c1"} */
 h1 {
   color: black;
   text-transform: uppercase;
@@ -269,5 +269,20 @@ h1 i {
   width: 350px;
 }
 
+.nav-wrapper{
+  position: static;
+
+}
+.modal-trigger{
+  position: relative;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: black;
+}
+
+.btn{
+  background-color: black;
+}
 
 
