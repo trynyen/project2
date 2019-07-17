@@ -2,14 +2,17 @@
 <ul>
   {{#each dbMeals}}
 
-  <div class="meal-option">
+  <div class="asdfasdfasd">
     <h4>{{name}}</h4>
     <h6>Location: {{zip}}</h6>
-    <h6>Servings Left: {{quantity}}</h6>
+    <h6 id="quantity-{{id}}">Servings Left: {{quantity}}</h6>
     <div>
-      <button class="btn btn-primary meal-option" data-ref="{{id}}">Eat</button>
+      <button class="btn btn-primary meal-option" data-id="{{this.id}}">Eat</button>
     </div>
   </div>
 
   {{/each}}
 </ul>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/meals.js"></script>

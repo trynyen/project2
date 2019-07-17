@@ -15,7 +15,7 @@ module.exports = function (app) {
     db.Meal.findAll({}).then(function (dbMeals) {
 
 
-      res.render("meals", { dbMeals });
+      res.render("meals", {dbMeals: dbMeals});
     });
 
   })
@@ -104,6 +104,8 @@ module.exports = function (app) {
     // res.end();
     // res.redirect("/home");
   });
+
+
 
   app.get("/api/users", function (req, res) {
     db.User.findAll({}).then(function (dbUsers) {
