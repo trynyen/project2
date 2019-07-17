@@ -25,13 +25,8 @@ module.exports = function (app) {
   //   // res.send("SECRETS!!!");
   //   res.render("example");
   // })
-<<<<<<< HEAD
   app.get("/", function(req, res) {
     db.User.findAll({}).then(function(dbMeals) {
-=======
-  app.get("/", function (req, res) {
-    db.User.findAll({}).then(function (dbExamples) {
->>>>>>> a388ed15f7df966c386d1b75818a66fedede5fd9
       res.render("index", {
         Meals: dbMeals
       });
