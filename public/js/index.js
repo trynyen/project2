@@ -1,8 +1,8 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems, open);
-});        
+// document.addEventListener("DOMContentLoaded", function() {
+//   var elems = document.querySelectorAll(".modal");
+//   var instances = M.Modal.init(elems, open);
+// });        
 console.log("index js was called");
 
 var postLogIn = function () {
@@ -26,12 +26,7 @@ $("#submit").on("click", postLogIn);
 // var $submitBtn = $("#submit");
 // var $exampleList = $("#example-list");
 
-// $(function(){
-//   var $select = $(".1-100");
-//   for (i=1;i<=100;i++){
-//       $select.append($('<option></option>').val(i).html(i))
-//   }
-// });​
+
 
 // // The API object contains methods for each kind of request we'll make
 // var API = {
