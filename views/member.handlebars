@@ -1,0 +1,21 @@
+{{!-- The logic/js file for this page has not been created. 
+I'm just trying to think ahead about what this page would look like --}}
+
+<table class="table">
+    <thead> 
+        <th>Meal ID</th>
+        <th>Meal Name</th> 
+        <th>Quantity</th> 
+        <th>Date Made</th> 
+    </thead> 
+    <tbody> 
+        {{#each Meal}} 
+        <tr> 
+            <td>{{this.id}}</td>
+            <td>{{this.name}}</td> 
+            <td>{{this.quantity}}</td> 
+            <td>{{this.createdAt}}</a></td> 
+        </tr> 
+        {{/each}} 
+    </tbody> 
+</table> 
