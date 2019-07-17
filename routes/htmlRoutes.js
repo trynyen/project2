@@ -5,9 +5,9 @@ module.exports = function(app) {
 
 
   // Shows make a meal form AND eat a meal button
-  app.get("/home", function(req, res) {
+  // app.get("/home", function(req, res) {
     
-  });
+  // });
 
 
   // List of Meal

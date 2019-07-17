@@ -2,14 +2,14 @@
 <ul>
   {{#each dbMeals}}
 
-     <div class="meal-option">
-        <h4>{{name}}</h4>
-        <h6>Location: {{zip}}</h6>
-        <h6>Servings Left: {{quantity}}</h6>
-        <div>
-            <button class="btn btn-primary meal-option" data-ref="{{id}}">Eat</button>
-        </div>
-     </div> 
+  <div class="meal-option">
+    <h4>{{name}}</h4>
+    <h6>Location: {{zip}}</h6>
+    <h6>Servings Left: {{quantity}}</h6>
+    <div>
+      <button class="btn btn-primary meal-option" data-ref="{{id}}">Eat</button>
+    </div>
+  </div>
 
   {{/each}}
 </ul>
