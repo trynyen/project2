@@ -1,8 +1,8 @@
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   var elems = document.querySelectorAll(".modal");
-//   var instances = M.Modal.init(elems, open);
-// });        
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".modal");
+  var instances = M.Modal.init(elems, open);
+});        
 console.log("index js was called");
 
 var postLogIn = function () {
