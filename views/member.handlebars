@@ -9,13 +9,13 @@ I'm just trying to think ahead about what this page would look like --}}
         <th>Date Made</th> 
     </thead> 
     <tbody> 
-        {{#Meal}} 
+        {{#each Meal}} 
         <tr> 
-            <td>{{id}}</td>
-            <td>{{name}}</td> 
-            <td>{{quantity}}</td> 
-            <td>{{createdAt}}</a></td> 
+            <td>{{this.id}}</td>
+            <td>{{this.name}}</td> 
+            <td>{{this.quantity}}</td> 
+            <td>{{this.createdAt}}</a></td> 
         </tr> 
-        {{/Meal}} 
+        {{/each}} 
     </tbody> 
 </table> 
