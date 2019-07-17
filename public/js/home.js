@@ -12,11 +12,3 @@ var makeMeal = function() {
 
 $("#make").on("click", makeMeal);
 $("#et").on("click", eatMeal);
-
-
-
-function eat() {
-    quantity--;   
-}
-
-$(".eat").on("click", eat)
