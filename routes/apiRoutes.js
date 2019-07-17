@@ -18,11 +18,11 @@ module.exports = function (app) {
       res.render("meals", {dbMeals: dbMeals});
     });
 
-  })
+  });
 
   app.get("/make", isAuthenticated, function (req, res) {
     res.render("make");
-  })
+  });
 
   // app.put
 
@@ -46,9 +46,9 @@ module.exports = function (app) {
 
 
   // Account Info
-  app.get("/api/user/:id", function (req, res) {
+  // app.get("/api/user/:id", function (req, res) {
 
-  });
+  // });
 
 
 
@@ -113,4 +113,4 @@ module.exports = function (app) {
     });
   });
 
-} 
+}; 

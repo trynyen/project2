@@ -13,13 +13,13 @@ function postMeal() {
     "quantity": Number(quantity),
     "zip" : zip,
     "phone": phone
-  }
+  };
 
   console.log(postObj);
   $.post("/api/meals", postObj, function(meal){
     console.log(meal);
-    window.location.href = '\meals';
-  })
+    window.location.href = "\meals";
+  });
 }
 
-$("#make").on('click', postMeal);
+$("#make").on("click", postMeal);
