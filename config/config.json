@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "Shiso*ume9",
     "database": "meals_db",
     "host": "localhost",
     "dialect": "mysql"

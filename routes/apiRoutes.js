@@ -114,7 +114,7 @@ module.exports = function (app) {
   });
   app.put("/api/meals", function(req, res) {
     db.quantity.update({
-      //thepart you are updating
+      //the part you are updating
       quantity: req.body.quantity--
     },{
       //where you want to update
