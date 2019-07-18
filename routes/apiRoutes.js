@@ -105,6 +105,30 @@ module.exports = function (app) {
     // res.redirect("/home");
   });
 
+  app.post("/api/orders", function(req,res) {
+    console.log("req.body: ", req.body.mealId, "req.user.id: ", req.user.id);
+    // db.Order.
+    db.Meal.findAll({where:{
+      id: req.body.mealId
+    }}).then(function(mealObj){
+      console.log("**************",mealObj[0].dataValues.id);
+      db.Order.create(
+        {
+          "quantity": 1,
+          "userId": req.user.id,
+          "mealId": mealObj[0].dataValues.id
+        },
+        {
+          where: {
+            id: mealObj[0].dataValues.id
+          }
+        }).then(function(dbPost) {
+        res.json(dbPost);
+        });
+    })
+    res.json("worked");
+  });
+
 
 
   app.get("/api/users", function (req, res) {
@@ -112,20 +136,32 @@ module.exports = function (app) {
       res.json(dbUsers);
     });
   });
-  app.put("/api/meals", function(req, res) {
-    db.quantity.update({
-      //the part you are updating
-      quantity: req.body.quantity--
-    },{
-      //where you want to update
-      where: {
-        id: req.body.id
-      }
-    }).then(function(dbQuantity) {
-      res.render("meals", dbQuantity);
-    });
-  });
-}
+
+
+app.put("/api/meals", function(req, res) {
+  console.log("*********",req.body.mealId);
+  db.Meal.findAll({where:{
+    id: req.body.mealId
+  }}).then(function(mealObj){
+    console.log("**************",mealObj[0].dataValues.id);
+    db.Meal.update(
+      {
+        "name": mealObj[0].dataValues.name,
+        "quantity": Number(mealObj[0].dataValues.quantity) -1,
+        "zip": mealObj[0].dataValues.zip,
+        "phone": mealObj[0].dataValues.phone,
+        "userId": mealObj[0].dataValues.userId
+      },
+      {
+        where: {
+          id: mealObj[0].dataValues.id
+        }
+      }).then(function(dbPost) {
+      res.json(dbPost);
+      });
+  })
+});
+};
 
 
 
