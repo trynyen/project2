@@ -5,14 +5,12 @@ function postMeal() {
   var quantity =$("#quantity").val();
   var zip = String($("#zip").val());
   var phone1 = String($("#phone1").val()); 
-  var phone2 = String($("#phone2").val());  
-  var phone3 = String($("#phone3").val());  
-  var phone = phone1 + phone2 + phone3;
+
   var postObj = {
     "name": mealName,
     "quantity": Number(quantity),
     "zip" : zip,
-    "phone": phone
+    "phone": phone1
   };
 
   console.log(postObj);
