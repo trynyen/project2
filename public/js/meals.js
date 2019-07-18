@@ -13,7 +13,7 @@ $(".meal-option").on("click", function(){
     success: function(response) {
       console.log(response);
       $.post('/api/orders', {mealId}, function(response){
-        console.log(response);
+        window.location.reload();
       })
     }
  });

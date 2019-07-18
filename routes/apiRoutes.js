@@ -144,6 +144,13 @@ app.put("/api/meals", function(req, res) {
     id: req.body.mealId
   }}).then(function(mealObj){
     console.log("**************",mealObj[0].dataValues.id);
+    if(mealObj[0].dataValues.quantity <= 1) {
+      db.Meal.destroy({where: {
+        id: req.body.mealId
+      }}).then(function(deletedMeal) {
+        res.json(deletedMeal);
+      })
+    }
     db.Meal.update(
       {
         "name": mealObj[0].dataValues.name,
