@@ -1,6 +1,6 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
+document.addEventListener("DOMContentLoaded", function() {
+  var elems = document.querySelectorAll(".modal");
   var instances = M.Modal.init(elems, open);
 });        
 console.log("index js was called");
@@ -12,12 +12,13 @@ var postLogIn = function () {
   $.post("/api/login", {
     email: email,
     password: password
-  }, function(user){
-    console.log(user)
+  }, function(user) { 
+    console.log(user);
     window.location.href = "/home";
-  })
-  
-}
+  });
+};
+
+$("#submit").on("click", postLogIn);
 // =======
 // // Get references to page elements
 // var $exampleText = $("#example-text");
@@ -25,12 +26,7 @@ var postLogIn = function () {
 // var $submitBtn = $("#submit");
 // var $exampleList = $("#example-list");
 
-// $(function(){
-//   var $select = $(".1-100");
-//   for (i=1;i<=100;i++){
-//       $select.append($('<option></option>').val(i).html(i))
-//   }
-// });​
+
 
 // // The API object contains methods for each kind of request we'll make
 // var API = {
@@ -87,14 +83,5 @@ var postLogIn = function () {
 // >>>>>>> master:public/js/home.js
 //   });
 // }
-
-
-$("#submit").on("click", postLogIn);
-
-
-
-// // Add event listeners to the submit and delete buttons
-// $submitBtn.on("click", handleFormSubmit);
-// $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 
