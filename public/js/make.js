@@ -23,3 +23,25 @@ function postMeal() {
 }
 
 $("#make").on("click", postMeal);
+
+
+function zipCodeValidate(zip) {
+  var zipcode = /^\d{5}$/;
+  if(zip.value.match(zipcode)) {
+    return true;
+  } else {
+    alert("Please enter a valid zip code");
+    return false;
+  }
+}
+
+
+function phonenumber(phone1) {
+  var phoneno = /^\d{10}$/;
+  if(phone1.value.match(phoneno)) {
+    return true;
+  } else {
+    alert("Please enter a valid zip code");
+    return false;
+  }
+}
