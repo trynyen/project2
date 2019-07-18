@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.carousel');
+    var instances = M.Carousel.init(elems, {});
+    var instance = M.Carousel.init({   
+        numVisible: 3,
+        fullWidth: true,
+
+      });
+  });
 console.log("meals js was called");
 
 $(".meal-option").on("click", function(){
@@ -13,7 +22,7 @@ $(".meal-option").on("click", function(){
     success: function(response) {
       console.log(response);
       $.post('/api/orders', {mealId}, function(response){
-        console.log(response);
+        window.location.reload();
       })
     }
  });

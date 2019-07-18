@@ -46,7 +46,15 @@ module.exports = function (app) {
 
 
   // Account Info
-  // app.get("/api/user/:id", function (req, res) {
+  app.get("/api/user/:id", function (req, res) {
+      db.User.findOne({
+        where: {
+          id: req.params.id
+        },
+        include: [db.Meal]
+      }).then(function(dbUser) {
+        res.json(dbUser);
+      });
 
   // });
 
@@ -144,6 +152,13 @@ app.put("/api/meals", function(req, res) {
     id: req.body.mealId
   }}).then(function(mealObj){
     console.log("**************",mealObj[0].dataValues.id);
+    if(mealObj[0].dataValues.quantity <= 1) {
+      db.Meal.destroy({where: {
+        id: req.body.mealId
+      }}).then(function(deletedMeal) {
+        res.json(deletedMeal);
+      })
+    }
     db.Meal.update(
       {
         "name": mealObj[0].dataValues.name,
@@ -161,8 +176,8 @@ app.put("/api/meals", function(req, res) {
       });
   })
 });
-};
+});
 
-
+}
 
 
