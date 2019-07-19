@@ -335,6 +335,12 @@ h1 i {
   width: 500px !important;
 }
 
+.btn-primary {
+ margin: 0 auto;
+ position: relative;
+ margin-top: -250px;
+ margin-left: 450px;
+
 
 
 
