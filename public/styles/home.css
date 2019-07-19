@@ -17,18 +17,3 @@ body {background:#232323; color:#fff}
 @media only screen and (min-width:36.250em) {
   .content {width:60%; padding-top:35% }
 }
-
-.nav-wrapper{
-    position: static;
-    background-color: black;
-  
-  }
-  .modal-trigger{
-    position: relative;
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
-    background-color: black;
-    font-family: American Typewriter, serif;
-    font-size: 20px;
-  }
