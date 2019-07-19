@@ -137,6 +137,18 @@ module.exports = function (app) {
     });
   });
 
+  app.get("/api/users/:id", function (req, res) {
+    var userMeals;
+    var userOrders;
+    db.Meal.findAll({
+      where: {
+        userId: req.params.id
+      }
+    }).then(function (dbMeals) {
+      res.render('member', {dbMeals});
+    });
+  });
+
 
 app.put("/api/meals", function(req, res) {
   console.log("*********",req.body.mealId);
