@@ -1,6 +1,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link rel="stylesheet" href="./styles/styles.css">
 <link rel="stylesheet" href="./styles/frontpage.css">
+
+<style>
+    h1 {
+        font-family:American Typewriter, serif;
+    }
+
+    .Mail {
+        margin-right: auto;
+        font-size: 24px;
+    }
+
+    .pw{
+        margin-right: auto;
+        font-size: 24px;
+    }
+</style>
+
 <nav>
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
@@ -14,10 +31,11 @@
   
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h4>Log In</h4>
-    email:
+      <h1>Log In</h1>
+    <h1 class="Mail">Email</h1>
         <input type="text" id="email">
-    password:
+        
+    <h1 class="pw">Password</h1>
         <input type="text" id="password">
 
     {{!-- <button type="submit" id="submit">Log In</button> --}}
