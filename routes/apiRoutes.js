@@ -46,7 +46,15 @@ module.exports = function (app) {
 
 
   // Account Info
-  // app.get("/api/user/:id", function (req, res) {
+  app.get("/api/user/:id", function (req, res) {
+      db.User.findOne({
+        where: {
+          id: req.params.id
+        },
+        include: [db.Meal]
+      }).then(function(dbUser) {
+        res.json(dbUser);
+      });
 
   // });
 
@@ -168,8 +176,8 @@ app.put("/api/meals", function(req, res) {
       });
   })
 });
-};
+});
 
-
+}
 
 
