@@ -64,7 +64,8 @@ module.exports = function (app) {
       "quantity": req.body.quantity,
       "zip": req.body.zip,
       "phone": req.body.phone,
-      "userId": req.user.id
+      "userId": req.user.id,
+      "image": req.body.image
     };
     // console.log(req.body);
     // console.log(req.user.id);
