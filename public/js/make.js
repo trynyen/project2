@@ -9,6 +9,7 @@ function postMeal() {
     "name": mealName,
     "quantity": Number(quantity),
     "zip" : zip,
+    "image" : image,
     "phone": phone1
   };
 
