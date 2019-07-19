@@ -19,6 +19,7 @@ function postMeal() {
   });
 };
 
+
 $("#make").on("click", function(){
   mealName = $("#meal-name").val();
   quantity =$("#quantity").val();
@@ -51,6 +52,3 @@ function phonenumber() {
     alert("Please enter a valid zip code");
   }
 }
-
-module.exports = zipCodeValidate;
-module.exports = phonenumber;
