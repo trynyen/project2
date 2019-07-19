@@ -131,9 +131,14 @@ module.exports = function (app) {
 
 
 
-  app.get("/api/users", function (req, res) {
-    db.User.findAll({}).then(function (dbUsers) {
-      res.json(dbUsers);
+  app.get("/user", function (req, res) {
+    console.log("*******", req.user.id);
+    db.Meal.findAll({
+      where: {
+        userId : req.user.id
+      }
+    }).then(function (dbMeals) {
+      res.render('member', {dbMeals});
     });
   });
 
