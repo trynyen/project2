@@ -299,6 +299,7 @@ h1 i {
 
 .form-group{
   width: 350px;
+  margin-left: 5px;
 }
 
 .nav-wrapper{
@@ -339,7 +340,20 @@ h1 i {
  margin: 0 auto;
  position: relative;
  margin-top: -250px;
- margin-left: 450px;
+ margin-left: 425px;
+ width: 125px;
+ height: 125px;
+ border-radius: 50%;
+ background-color: lightgray;
+ font-size: 36px;
+ font-family: Brush Script MT, Brush Script Std, cursive;
+ color: darkslategray;
+ transition: transform .2s; /* Animation */
+}
+
+.btn-primary:hover {
+  transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
 
 
