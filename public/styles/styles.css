@@ -232,7 +232,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 400;
   line-height: 1;
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
   font-size: 40px;
   background-color: lightgray;
@@ -247,6 +247,10 @@ h1 i {
   font-style: normal;
   text-transform: none;
   font-family: 'Playfair Display', serif;
+}
+
+.eatMe {
+  margin-top: 120px;
 }
 
 .utensils{
@@ -336,7 +340,7 @@ h1 i {
   width: 500px !important;
 }
 
-.btn-primary {
+#make {
  margin: 0 auto;
  position: relative;
  margin-top: -250px;
@@ -344,15 +348,19 @@ h1 i {
  width: 125px;
  height: 125px;
  border-radius: 50%;
- background-color: lightgray;
+ border-color: #d3d3d3;
+ background-color: #d3d3d3;
  font-size: 36px;
  font-family: Brush Script MT, Brush Script Std, cursive;
  color: darkslategray;
  transition: transform .2s; /* Animation */
 }
 
-.btn-primary:hover {
+#make:hover {
   transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+  color: #2f4f4f;
 }
 
 
