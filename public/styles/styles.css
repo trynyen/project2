@@ -269,22 +269,6 @@ h1 i {
   width: 350px;
 }
 
-.nav-wrapper{
-  position: static;
-  background-color: black;
-
-}
-.modal-trigger{
-  position: relative;
-  float: right;
-  margin-top: 10px;
-  margin-right: 10px;
-  background-color: black;
-  font-family: Brush Script MT, Brush Script Std, cursive;
-  font-size: 20px;
-}
-
-
 .carousel {
   overflow: hidden;
   position: relative;
