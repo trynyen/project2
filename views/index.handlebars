@@ -22,8 +22,10 @@
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
       <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Register</a>
     </div>
     
+
 </nav>
 {{!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a> --}}
 
@@ -31,19 +33,40 @@
   
   <div id="modal1" class="modal">
     <div class="modal-content">
-      <h1>Log In</h1>
+      <h1 class="login">Log In</h1>
     <h1 class="Mail">Email</h1>
         <input type="text" id="email">
         
     <h1 class="pw">Password</h1>
         <input type="text" id="password">
 
+    <button data-target="modal1" type="submit" class="btn modal-trigger" id="submit">Login</button>
+
     {{!-- <button type="submit" id="submit">Log In</button> --}}
     </div>
-    <div class="modal-footer">
-    <button data-target="modal1" type="submit" class="btn modal-trigger" id="submit">Submit</button>
+    {{!-- <div class="modal-footer">
       {{!-- <button type="submit" id="submit">Log In</button> --}}
+    </div> --}}
+  </div>
+
+  <!-- Register Modal Structure -->
+  
+  <div id="modal2" class="modal">
+    <div class="modal-content">
+      <h1 class="login">Register</h1>
+    <h1 class="Mail">Email</h1>
+        <input type="text" id="registerEmail">
+        
+    <h1 class="pw">Password</h1>
+        <input type="text" id="registerPassword">
+
+    <button data-target="modal1" type="submit" class="btn modal-trigger" id="register">Register</button>
+
+    {{!-- <button type="submit" id="submit">Log In</button> --}}
     </div>
+    {{!-- <div class="modal-footer">
+      {{!-- <button type="submit" id="submit">Log In</button> --}}
+    </div> --}}
   </div>
 
   <div class="feature"></div>
