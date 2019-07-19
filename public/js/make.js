@@ -10,7 +10,7 @@ function postMeal() {
     "name": mealName,
     "quantity": Number(quantity),
     "zip" : zip,
-    "phone": phone
+    "phone": phone1
   };
 
   console.log(postObj);
@@ -21,18 +21,20 @@ function postMeal() {
 }
 
 $("#make").on("click", function(){
-  postMeal();
   zipCodeValidate();
   phonenumber();
+  console.log("2 functions are called");
 });
 
 function zipCodeValidate() {
   var zipcode = /^\d{5}$/;
   if(zip.value.match(zipcode)) {
-    return true;
+    postMeal();
+    console.log("meal posted");
+    
   } else {
     alert("Please enter a valid zip code");
-    return false;
+    console.log("not posted");
   }
 }
 
@@ -40,9 +42,11 @@ function zipCodeValidate() {
 function phonenumber() {
   var phoneno = /^\d{10}$/;
   if(phone1.value.match(phoneno)) {
-    return true;
+    postMeal();
+    console.log("meal posted");
+
   } else {
     alert("Please enter a valid zip code");
-    return false;
+    console.log("not posted");
   }
 }
