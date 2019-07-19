@@ -21,11 +21,12 @@
 
 
 <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
-      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
-    </div>
-    
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo"><i class="material-icons">cloud</i>Logo</a>
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a>
+    <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Register</a>
+  </div>
+
 </nav>
 {{!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Log In</a> --}}
 
@@ -41,11 +42,24 @@
         <input type="text" id="password">
 
     {{!-- <button type="submit" id="submit">Log In</button> --}}
-    </div>
-    <div class="modal-footer">
+  </div>
+  <div class="modal-footer">
     <button data-target="modal1" type="submit" class="btn modal-trigger" id="submit">Submit</button>
-      {{!-- <button type="submit" id="submit">Log In</button> --}}
-    </div>
+    {{!-- <button type="submit" id="submit">Log In</button> --}}
+  </div>
+</div>
+
+<!-- Register Modal Structure -->
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <h4>Register</h4>
+    email:
+    <input type="text" id="email2">
+    password:
+    <input type="text" id="password2">
+
+    {{!-- <button type="submit" id="submit">Log In</button> --}}
   </div>
 
   <div class="feature"></div>

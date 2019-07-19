@@ -18,6 +18,19 @@ var postLogIn = function () {
   });
 };
 
+var postRegister = function () {
+  var registerEmail = $("#email2").val();
+  var registerPassword = $("#password2").val();
+
+  $.post("/api/register", {
+    email: registerEmail,
+    password: registerPassword
+  }, function(user) { 
+    console.log(user);
+    // window.location.href = "/home";
+  });
+};
+
 $("#submit").on("click", postLogIn);
 
 $(function(){
