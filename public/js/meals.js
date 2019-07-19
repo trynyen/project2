@@ -2,8 +2,11 @@ document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.carousel');
     var instances = M.Carousel.init(elems, {});
     var instance = M.Carousel.init({   
-        numVisible: 3,
+        numVisible: 4,
         fullWidth: true,
+        shift: 10,
+        padding: 3,
+
 
       });
   });

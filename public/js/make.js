@@ -8,11 +8,13 @@ function postMeal() {
   var phone2 = String($("#phone2").val());  
   var phone3 = String($("#phone3").val());  
   var phone = phone1 + phone2 + phone3;
+  var image = String($("#image").val());
   var postObj = {
     "name": mealName,
     "quantity": Number(quantity),
     "zip" : zip,
-    "phone": phone
+    "phone": phone,
+    "image" : image
   };
 
   console.log(postObj);
