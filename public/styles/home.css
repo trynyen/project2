@@ -3,7 +3,7 @@ body, html {padding:0; margin:0}
 body {background:#232323; color:#fff}
 .opaque {position:absolute; top:0; left:0; right:0; bottom:0; opacity:0; background:#d2d6f1;}
 .lt-ie9 .opaque {display:none;}
-.feature {position:fixed; top:0; z-index:0; width:100%; padding-top:50%; background: url(http://www.patchapman.co.uk/wp-content/uploads/2019/05/indian-Kitchen-dishes.jpg) center center no-repeat;
+.feature {position:fixed; top:0; z-index:0; width:100%; padding-top:50%; background: url(http://s3.nikecdn.com/pass/NikeBasketball/LeBron_Poster.jpg) center center no-repeat;
     -webkit-background-size:250%;
        -moz-background-size:250%;
          -o-background-size:250%;
@@ -17,7 +17,6 @@ body {background:#232323; color:#fff}
 @media only screen and (min-width:36.250em) {
   .content {width:60%; padding-top:35% }
 }
-
 .nav-wrapper{
     position: static;
     background-color: black;
