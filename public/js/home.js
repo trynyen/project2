@@ -6,13 +6,13 @@ var eatMeal = function () {
 
 var makeMeal = function () {
   console.log("make meal was called");
-  window.location.href = "/make";
+  window.location.href = "/meals";
 };
 
-var makeMeal = function() {
-    console.log("make meal was called")
-    window.location.href =  "/make";
-}
+// var makeMeal = function() {
+//     console.log("make meal was called")
+//     window.location.href =  "/make";
+// }
  
 
 $("#make").on("click", makeMeal);

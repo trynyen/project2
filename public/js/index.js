@@ -18,7 +18,22 @@ var postLogIn = function () {
   });
 };
 
+var postRegister = function () {
+  var registerEmail = $("#registerEmail").val();
+  var registerPassword = $("#registerPassword").val();
+
+  $.post("/api/register", {
+    email: registerEmail,
+    password: registerPassword
+  }, function(user) { 
+    console.log(user);
+    // window.location.href = "/home";
+  });
+};
+
 $("#submit").on("click", postLogIn);
+$("#register").on("click", postRegister);
+
 // =======
 // // Get references to page elements
 // var $exampleText = $("#example-text");
