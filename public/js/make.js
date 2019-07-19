@@ -6,11 +6,16 @@ function postMeal() {
   var zip = String($("#zip").val());
 
   var phone1 = String($("#phone1").val()); 
+  var phone2 = String($("#phone2").val());  
+  var phone3 = String($("#phone3").val());  
+  var phone = phone1 + phone2 + phone3;
+  var image = String($("#image").val());
 
   var postObj = {
     "name": mealName,
     "quantity": Number(quantity),
     "zip" : zip,
+    "image" : image,
     "phone": phone1
   };
 
