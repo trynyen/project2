@@ -1,14 +1,18 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
- 
-
-   
-  
-  {{!-- <link rel="stylesheet" href="./styles/styles.css"> --}}
+{{!-- <link rel="stylesheet" href="./styles/styles.css"> --}}
 {{!-- </head> --}}
 <div class="body1">
 
+
+
+<nav>
+   <div class="navbar">
+     {{!-- <a href=“#!” class=“brand-logo”><i class=“material-icons”>cloud</i>Logo</a> --}}
+     <a class="text-light user" href="/api/user"><i class="far fa-user"></i></a>
+     <a href="/logout" class="logout"><span class="navbar-text text-light logout-text">Log Out</span></a>
+   </div>
+</nav>
 
 <div class="container">
     <div class="card">
@@ -19,7 +23,10 @@
             </div>
         </div>
         <div class="back">
-          <h1>TIME TO <span> <i></i> Share!</span></h1>
+
+          {{!-- <h1>TIME TO <span> <i></i> Share!</span></h1> --}}
+          {{!-- <h1>Time to Share!</h1> --}}
+          <div class="make-meal-form">
              <div class="form-group">
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="meal-name" aria-describedby="emailHelp" placeholder="What are you making?">
@@ -36,6 +43,11 @@
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="zip" aria-describedby="emailHelp" placeholder="Enter Zipcode">
             </div>
+            <div class="form-group">
+                {{!-- <label for="exampleInputEmail1"></label> --}}
+                <input type="text" class="form-control" id="image" aria-describedby="emailHelp" placeholder="Upload an image">
+            </div>
+            </div>
             <button type="submit" class="btn btn-primary" id="make">Make</button>
         </div>
     </div>
@@ -51,7 +63,7 @@
             </div>
         </div>
         <div class="back" id="et">
-            <h1 class="eatMe">Eat ME<span> <i></i> NOW!</span></h1>
+            <h1 class="eatMe">Find a meal<span> <i></i> NOW!</span></h1>
                     
            
     </div>
@@ -61,8 +73,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    
     <script src="/js/home.js"></script>
+
     <script src="/js/make.js"></script> 
   
-{{!-- </body> --}}
-{{!-- </div>
-</html> --}}
+

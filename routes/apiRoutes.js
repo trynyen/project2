@@ -69,7 +69,7 @@ module.exports = function (app) {
       "userId": req.user.id,
       "image": req.body.image
     };
-    // console.log(req.body);
+    console.log(req.body);
     // console.log(req.user.id);
     // res.end();
 

@@ -3,6 +3,7 @@ var mealName;
 var quantity;
 var zip;
 var phone1; 
+var image;
 
 function postMeal() {
   var postObj = {
@@ -26,6 +27,7 @@ $("#make").on("click", function(){
   quantity =$("#quantity").val();
   zip = $("#zip").val();
   phone1 = $("#phone1").val(); 
+  image = $("#image").val(); 
   console.log(mealName, quantity, zip, phone1);
   if (zipCodeValidate() && phonenumber()) {
     postMeal();
@@ -35,24 +37,27 @@ $("#make").on("click", function(){
 
 
 function zipCodeValidate() {
-  var zipcode = /^\d{5}$/;
-  if(zip.match(zipcode)) {
+  var zipcode = new RegExp("/^\d{5}$/");
+  // console.log("zip is a " + typeOf)
+  if(zip.length === 5) {
     return true;
     
   } else {
     alert("Please enter a valid zip code");
-    window.location.href = "/home"
+    window.location.href = "/home";
+    return false;
   }
 }
 
 
 function phonenumber() {
-  var phoneno = /^\d{10}$/;
-  if(phone1.match(phoneno)) {
+  var phoneno = new RegExp("/^\d{10}$/");
+  if(phone1.length === 10) {
     return true;
 
   } else {
-    alert("Please enter a valid zip code");
-    window.location.href = "/home"
+    alert("Please enter a valid Phone Number");
+    window.location.href = "/home";
+    return false;
   }
 }
