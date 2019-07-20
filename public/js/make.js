@@ -3,14 +3,15 @@ var mealName;
 var quantity;
 var zip;
 var phone1; 
+var image;
 
 function postMeal() {
   var postObj = {
     "name": mealName,
     "quantity": Number(quantity),
     "zip" : zip,
-    "image" : image,
-    "phone": phone1
+    "phone": phone1,
+    "image" : image
   };
 
   console.log(postObj);
@@ -36,13 +37,12 @@ $("#make").on("click", function(){
 
 function zipCodeValidate() {
   var zipcode = new RegExp("/^\d{5}$/");
-  // console.log("zip is a " + typeOf)
   if(zip.match(zipcode)) {
     return true;
     
   } else {
     alert("Please enter a valid zip code");
-    return false;
+    // return false;
   }
 }
 
@@ -54,5 +54,6 @@ function phonenumber() {
 
   } else {
     alert("Please enter a valid zip code");
+    // return false;
   }
 }
