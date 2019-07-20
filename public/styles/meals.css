@@ -15,6 +15,7 @@ height: 100%;
 
 body {
   background-color: #D2DBDD;
+  /* #c597809e */
   display: flex;
   display: -webkit-flex;
   -webkit-justify-content: center;
@@ -189,12 +190,19 @@ border-bottom-right-radius: 12px;
       margin-top: -250px;
   }
 
+
   .card--1{
       background-size: cover;
       background: center;
+      background-size: 400px 500px;
+      background-repeat: no-repeat;
+      width: 400px;
+      height: 500px;
+
   }
 
   .card__info {
+    margin-top: 200px; 
       align-content: center;
       text-align: center;
   }
@@ -208,3 +216,83 @@ border-bottom-right-radius: 12px;
       font-size: 16px;
       color: white;
   }
+
+  nav {
+    color: #fff;
+    background: none;
+    width: 0;
+    height: 0;
+    line-height: 0;
+}
+
+/*navbar for home page*/
+.navbar{
+  position: absolute;
+  float: right;
+  margin-top: -480px;
+  margin-left: 1550px;
+  color: white;
+  background-color: black;
+  font-family: American Typewriter, serif;
+  font-size: 20px;
+}
+
+/* user icon*/
+.user{
+  position: absolute;
+  float: right;
+  margin-left: -80px; 
+  color: white;
+  background-color: black;
+  font-family: American Typewriter, serif;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+}
+
+.fa-user {
+  position: absolute;
+  padding-left: 10px;
+  padding-top: 8px;
+}
+
+/* logout icon*/
+.logout{
+  height: 25px;
+  width: 80px;
+}
+
+.navbar-text{
+  position: absolute;
+  padding-left: 3px;
+  padding-top: 12px;
+}
+  
+#mealList{
+  position: absolute;
+  background: url(https://images.unsplash.com/photo-1546810685-721985021baa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80) center no-repeat no-repeat;
+  background-size: 100%;
+  width: 100%;
+  height: 200px;
+  padding-top: -100px;
+  margin-top: -300px;
+  color: white;
+}
+/* https://images.unsplash.com/photo-1439300807642-1d369f8431fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80 */
+#mealListText {
+  color:#272626;
+    padding: 80px;
+    font-size: 55px;
+    font-weight: bolder;
+    text-align: center;
+    /* background: url(../images/train.gif) center no-repeat no-repeat; */
+    height: 250px;
+  
+}
+
+.container.pick-meal {
+  margin: 0 auto;
+  max-width: 1280px;
+  margin-top: 55px;
+  margin-left: 32.5%;
+}

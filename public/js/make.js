@@ -3,6 +3,7 @@ var mealName;
 var quantity;
 var zip;
 var phone1; 
+var image;
 
 function postMeal() {
   var postObj = {
@@ -26,6 +27,7 @@ $("#make").on("click", function(){
   quantity =$("#quantity").val();
   zip = $("#zip").val();
   phone1 = $("#phone1").val(); 
+  image = $("#image").val(); 
   console.log(mealName, quantity, zip, phone1);
   if (zipCodeValidate() && phonenumber()) {
     postMeal();
