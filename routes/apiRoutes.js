@@ -1,6 +1,8 @@
 var db = require("../models");
 var passport = require("../config/passport");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+var moment = require("moment");
+
 
 module.exports = function (app) {
   app.get("/secrets", isAuthenticated, function (req, res) {
@@ -132,9 +134,39 @@ module.exports = function (app) {
 
 
 
-  app.get("/api/users", function (req, res) {
-    db.User.findAll({}).then(function (dbUsers) {
-      res.json(dbUsers);
+  app.get("/user", function (req, res) {
+    console.log("*******", req.user.id);
+    db.Meal.findAll({
+      where: {
+        userId : req.user.id
+      }
+    }).then(function (dbMeals) {
+      console.log("**************", dbMeals)
+      var formatted = [];
+      for(i=0; i<dbMeals.length; i++){
+        meal = {
+          "id" : dbMeals[i].dataValues.id,
+          "name": dbMeals[i].dataValues.name,
+          "quantity": dbMeals[i].dataValues.quantity,
+          "createdAt": moment(dbMeals[i].dataValues.createdAt).format('LLLL')
+        }
+        formatted.push(meal)
+      }
+     
+      console.log(formatted);
+      res.render('member', {formatted});
+    });
+  });
+
+  app.get("/api/users/:id", function (req, res) {
+    var userMeals;
+    var userOrders;
+    db.Meal.findAll({
+      where: {
+        userId: req.params.id
+      }
+    }).then(function (dbMeals) {
+      res.render('member', {dbMeals});
     });
   });
 
