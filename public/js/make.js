@@ -35,8 +35,7 @@ $("#make").on("click", function(){
 
 
 function zipCodeValidate() {
-  var zipcode = new RegExp("/^\d{5}$/");
-  // console.log("zip is a " + typeOf)
+  var zipcode = /^\d{5}$/;
   if(zip.match(zipcode)) {
     return true;
     
@@ -48,7 +47,7 @@ function zipCodeValidate() {
 
 
 function phonenumber() {
-  var phoneno = new RegExp("/^\d{10}$/");
+  var phoneno = /^\d{10}$/;
   if(phone1.match(phoneno)) {
     return true;
 
