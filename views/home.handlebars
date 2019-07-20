@@ -18,6 +18,14 @@
 <div class="body1">
 <body>
 
+<nav>
+   <div class="navbar">
+     {{!-- <a href=“#!” class=“brand-logo”><i class=“material-icons”>cloud</i>Logo</a> --}}
+     <a class="text-light user" href="/api/user"><i class="far fa-user"></i></a>
+     <a href="/logout" class="logout"><span class="navbar-text text-light logout-text">Log Out</span></a>
+   </div>
+</nav>
+
 <div class="container">
     <div class="card">
         <div class="front">
@@ -27,7 +35,7 @@
             </div>
         </div>
         <div class="back">
-          <h1>TIME TO <span> <i></i> Share!</span></h1>
+          <h1>Share a dish <span> <i></i> TODAY!</span></h1>
              <div class="form-group">
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="meal-name" aria-describedby="emailHelp" placeholder="What are you making?">
@@ -59,7 +67,7 @@
             </div>
         </div>
         <div class="back" id="et">
-            <h1 class="eatMe">Eat ME<span> <i></i> NOW!</span></h1>
+            <h1 class="eatMe">Find a meal<span> <i></i> NOW!</span></h1>
                     
            
     </div>
@@ -68,7 +76,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="/js/home.js"></script>
-    <script src="/js/make.js"></script> --}}
+    <script src="/js/make.js"></script>
 
   
 </body>

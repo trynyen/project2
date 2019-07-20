@@ -1,6 +1,20 @@
  <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-<h1>Meals List Page</h1>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://kit.fontawesome.com/f51a04bc22.js"></script>
+
+  
+<nav>
+   <div class="navbar">
+     {{!-- <a href=“#!” class=“brand-logo”><i class=“material-icons”>cloud</i>Logo</a> --}}
+     <a class="text-light user" href="/api/user"><i class="far fa-user"></i></a>
+     <a href="/logout" class="logout"><span class="navbar-text text-light logout-text">Log Out</span></a>
+   </div>
+</nav>
+<div id="mealList">
+
+  <div class="container pick-meal"><span id="mealListText">PICK A MEAL</span></div>
+</div>
+<br>
 <ul>
   {{!-- {{#each dbMeals}} --}}
 
