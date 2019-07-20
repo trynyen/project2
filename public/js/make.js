@@ -37,11 +37,12 @@ $("#make").on("click", function(){
 function zipCodeValidate() {
   var zipcode = new RegExp("/^\d{5}$/");
   // console.log("zip is a " + typeOf)
-  if(zip.match(zipcode)) {
+  if(zip.length === 5) {
     return true;
     
   } else {
     alert("Please enter a valid zip code");
+    window.location.href = "/home";
     return false;
   }
 }
@@ -49,10 +50,12 @@ function zipCodeValidate() {
 
 function phonenumber() {
   var phoneno = new RegExp("/^\d{10}$/");
-  if(phone1.match(phoneno)) {
+  if(phone1.length === 10) {
     return true;
 
   } else {
-    alert("Please enter a valid zip code");
+    alert("Please enter a valid Phone Number");
+    window.location.href = "/home";
+    return false;
   }
 }
