@@ -312,6 +312,11 @@ h1 i {
   margin-left: 5px;
 }
 
+.make-meal-form {
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+}
+
 .nav-wrapper{
   position: static;
   background-color: black;
@@ -342,6 +347,9 @@ h1 i {
   z-index: 4;
 }
 
+.number {
+  display:none;
+}
 .carousel .carousel-item {
   width: 500px !important;
 }

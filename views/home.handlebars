@@ -1,22 +1,10 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-  <script src="https://kit.fontawesome.com/f51a04bc22.js"></script>
-
-   
-  
-  <link rel="stylesheet" href="./styles/styles.css">
-</head>
+{{!-- <link rel="stylesheet" href="./styles/styles.css"> --}}
+{{!-- </head> --}}
 <div class="body1">
-<body>
+
+
 
 <nav>
    <div class="navbar">
@@ -35,7 +23,10 @@
             </div>
         </div>
         <div class="back">
-          <h1>Share a dish <span> <i></i> TODAY!</span></h1>
+
+          {{!-- <h1>TIME TO <span> <i></i> Share!</span></h1> --}}
+          {{!-- <h1>Time to Share!</h1> --}}
+          <div class="make-meal-form">
              <div class="form-group">
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="meal-name" aria-describedby="emailHelp" placeholder="What are you making?">
@@ -51,6 +42,11 @@
              <div class="form-group">
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="zip" aria-describedby="emailHelp" placeholder="Enter Zipcode">
+            </div>
+            <div class="form-group">
+                {{!-- <label for="exampleInputEmail1"></label> --}}
+                <input type="text" class="form-control" id="image" aria-describedby="emailHelp" placeholder="Upload an image">
+            </div>
             </div>
             <button type="submit" class="btn btn-primary" id="make">Make</button>
         </div>
@@ -73,12 +69,11 @@
     </div>
 </div>
 
-
+      <script src="https://kit.fontawesome.com/f51a04bc22.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
     <script src="/js/home.js"></script>
-    <script src="/js/make.js"></script>
 
+    <script src="/js/make.js"></script> 
   
-</body>
-</div>
-</html>
+
