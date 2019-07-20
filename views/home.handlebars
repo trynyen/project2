@@ -5,9 +5,26 @@
 
    
   
+<<<<<<< HEAD
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+{{! Potential Nav Bar }}
+{{!-- <nav>
+    <div class="navbar" style="background-color: #2f4f4f;">
+      <a class="text-light" href="/api/user"><i class="far fa-user"></i></a>
+      <a href="/logout">
+        <span class="navbar-text text-light">Log Out</span>
+      </a>
+    </div>
+</nav> --}}
+
+=======
   {{!-- <link rel="stylesheet" href="./styles/styles.css"> --}}
 {{!-- </head> --}}
+>>>>>>> master
 <div class="body1">
+
 
 
 <div class="container">
@@ -19,7 +36,9 @@
             </div>
         </div>
         <div class="back">
-          <h1>TIME TO <span> <i></i> Share!</span></h1>
+          {{!-- <h1>TIME TO <span> <i></i> Share!</span></h1> --}}
+          {{!-- <h1>Time to Share!</h1> --}}
+          <div class="make-meal-form">
              <div class="form-group">
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="meal-name" aria-describedby="emailHelp" placeholder="What are you making?">
@@ -35,6 +54,11 @@
              <div class="form-group">
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="zip" aria-describedby="emailHelp" placeholder="Enter Zipcode">
+            </div>
+            <div class="form-group">
+                {{!-- <label for="exampleInputEmail1"></label> --}}
+                <input type="text" class="form-control" id="image" aria-describedby="emailHelp" placeholder="Upload an image">
+            </div>
             </div>
             <button type="submit" class="btn btn-primary" id="make">Make</button>
         </div>
