@@ -32,6 +32,8 @@ $("#make").on("click", function(){
   }
 });
 
+
+
 function zipCodeValidate() {
   var zipcode = new RegExp("/^\d{5}$/");
   // console.log("zip is a " + typeOf)
@@ -40,6 +42,7 @@ function zipCodeValidate() {
     
   } else {
     alert("Please enter a valid zip code");
+    return false;
   }
 }
 
