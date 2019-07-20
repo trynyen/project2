@@ -7,13 +7,14 @@
 *{box-sizing:border-box}
 .body1 {
   margin: 0;
-  background: url(https://images.unsplash.com/photo-1480072723304-5021e468de85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80) center center no-repeat;
+  background: url(https://images.unsplash.com/photo-1541675955960-b9c87e17883d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1867&q=80) center center no-repeat;
   height: 100vh;
   display: -webkit-flex;
   display: flex;
   -webkit-align-items: center; 
   align-items: center;
 }
+/* https://images.unsplash.com/photo-1480072723304-5021e468de85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80 */
 .container {
   width: 600px;
   height: 340px;
@@ -145,15 +146,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #56856c9c;
+  background-color: #bf7044b8;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .card, .front {
-  background-color: #56856c7a;
+  background-color: #bf7044b8;
 }
+
 .front {
   display:-webkit-flex;
   display: flex;
@@ -260,7 +262,7 @@ h1 i {
 .utensils{
   height: 175px;
   width: 175px;
-  border: black 6px solid;
+  border: black 4px solid;
   border-radius: 50%;
   text-align: center;
   margin-left: auto;
@@ -293,7 +295,7 @@ h1 i {
 #eat-up{
   width: 300px;
   height: 70px;
-  border: solid black 4px;
+  border: solid black 3px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
@@ -308,6 +310,11 @@ h1 i {
 .form-group{
   width: 350px;
   margin-left: 5px;
+}
+
+.make-meal-form {
+  margin-top: 2.5rem;
+  margin-left: 1rem;
 }
 
 .nav-wrapper{
@@ -370,6 +377,57 @@ h1 i {
   color: #2f4f4f;
 }
 
+.form-control{
+  margin-left: 25px;
+  margin-top: 17px;
+}
 
+.form-control:focus {
+  -webkit-box-shadow: 0px 0px 4px #102a1a;
+       -moz-box-shadow: 0px 0px 4px #102a1a;
+            box-shadow: 0px 0px 4px #102a1a;
+}
 
+/*navbar for home page*/
+.navbar{
+  position: absolute;
+  float: right;
+  margin-top: -460px;
+  margin-left: 1470px;
+  color: white;
+  background-color: black;
+  font-family: American Typewriter, serif;
+  font-size: 20px;
+}
+
+/* user icon*/
+.user{
+  position: absolute;
+  float: right;
+  margin-left: -80px; 
+  color: white;
+  background-color: black;
+  font-family: American Typewriter, serif;
+  font-size: 20px;
+  height: 45px;
+  width: 45px;
+}
+
+.fa-user {
+  position: absolute;
+  padding-left: 13.5px;
+  padding-top: 12px;
+}
+
+/* logout icon*/
+.logout{
+  height: 30px;
+  width: 80px;
+}
+
+.navbar-text{
+  position: absolute;
+  padding-left: 3px;
+  padding-top: 1px;
+}
 
