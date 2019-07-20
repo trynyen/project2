@@ -310,6 +310,11 @@ h1 i {
   margin-left: 5px;
 }
 
+.make-meal-form {
+  margin-top: 2.5rem;
+  margin-left: 1rem;
+}
+
 .nav-wrapper{
   position: static;
   background-color: black;

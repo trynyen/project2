@@ -39,7 +39,9 @@
             </div>
         </div>
         <div class="back">
-          <h1>TIME TO <span> <i></i> Share!</span></h1>
+          {{!-- <h1>TIME TO <span> <i></i> Share!</span></h1> --}}
+          {{!-- <h1>Time to Share!</h1> --}}
+          <div class="make-meal-form">
              <div class="form-group">
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="meal-name" aria-describedby="emailHelp" placeholder="What are you making?">
@@ -55,6 +57,11 @@
              <div class="form-group">
                 {{!-- <label for="exampleInputEmail1"></label> --}}
                 <input type="email" class="form-control" id="zip" aria-describedby="emailHelp" placeholder="Enter Zipcode">
+            </div>
+            <div class="form-group">
+                {{!-- <label for="exampleInputEmail1"></label> --}}
+                <input type="text" class="form-control" id="image" aria-describedby="emailHelp" placeholder="Upload an image">
+            </div>
             </div>
             <button type="submit" class="btn btn-primary" id="make">Make</button>
         </div>
