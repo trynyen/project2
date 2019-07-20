@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes) {
     quantity: DataTypes.INTEGER,
     zip: DataTypes.STRING,
     phone: DataTypes.STRING,
-    image: DataTypes.STRING,
+    image: DataTypes.STRING(5000),
     
     
   });
