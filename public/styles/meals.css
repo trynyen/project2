@@ -114,6 +114,8 @@ z-index: 2;
   border-bottom-left-radius: 12px;
 border-bottom-right-radius: 12px;
    padding: 16px 24px 24px 24px;
+   margin-top: 15px;
+   
 }
 
 .card__category {
@@ -175,8 +177,8 @@ border-bottom-right-radius: 12px;
   }
   
   .carousel .carousel-item {
-    width: 650px ;
-    height: 650px;
+    width: 750px ;
+    height: 750px;
     position: center;
     display: flex;
 
@@ -185,4 +187,24 @@ border-bottom-right-radius: 12px;
   h1 {
       position: absolute;
       margin-top: -250px;
+  }
+
+  .card--1{
+      background-size: cover;
+      background: center;
+  }
+
+  .card__info {
+      align-content: center;
+      text-align: center;
+  }
+
+  .card__author {
+      position: center;
+      font-size: 18px;
+  }
+
+  .card__time {
+      font-size: 16px;
+      color: white;
   }
