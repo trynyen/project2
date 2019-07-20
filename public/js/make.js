@@ -41,7 +41,7 @@ function zipCodeValidate() {
     
   } else {
     alert("Please enter a valid zip code");
-    return false;
+    window.location.href = "/home"
   }
 }
 
@@ -53,5 +53,6 @@ function phonenumber() {
 
   } else {
     alert("Please enter a valid zip code");
+    window.location.href = "/home"
   }
 }
