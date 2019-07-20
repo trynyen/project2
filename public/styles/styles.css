@@ -7,7 +7,7 @@
 *{box-sizing:border-box}
 .body1 {
   margin: 0;
-  background: darkslategray;
+  background: url(https://images.unsplash.com/photo-1480072723304-5021e468de85?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2104&q=80) center center no-repeat;
   height: 100vh;
   display: -webkit-flex;
   display: flex;
@@ -145,10 +145,14 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRecwhaiqUaWWjZ-WVDlgua7Z6wlP0NtrfpciF9f9gvTV3785Zm);
+  background-color: #56856c9c;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.card, .front {
+  background-color: #56856c7a;
 }
 .front {
   display:-webkit-flex;
@@ -232,7 +236,7 @@ h1 {
   text-transform: uppercase;
   font-weight: 400;
   line-height: 1;
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
   font-size: 40px;
   background-color: lightgray;
@@ -247,6 +251,10 @@ h1 i {
   font-style: normal;
   text-transform: none;
   font-family: 'Playfair Display', serif;
+}
+
+.eatMe {
+  margin-top: 120px;
 }
 
 .utensils{
@@ -285,12 +293,12 @@ h1 i {
 #eat-up{
   width: 300px;
   height: 70px;
-  /* border: solid black 3px; */
+  border: solid black 4px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 15px;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 36px;
   font-family: Brush Script MT, Brush Script Std, cursive;
   background-color: lightgray;
@@ -299,6 +307,7 @@ h1 i {
 
 .form-group{
   width: 350px;
+  margin-left: 5px;
 }
 
 .nav-wrapper{
@@ -333,6 +342,29 @@ h1 i {
 
 .carousel .carousel-item {
   width: 500px !important;
+}
+
+#make {
+ margin: 0 auto;
+ position: relative;
+ margin-top: -250px;
+ margin-left: 425px;
+ width: 125px;
+ height: 125px;
+ border-radius: 50%;
+ border-color: #d3d3d3;
+ background-color: #d3d3d3;
+ font-size: 36px;
+ font-family: Brush Script MT, Brush Script Std, cursive;
+ color: darkslategray;
+ transition: transform .2s; /* Animation */
+}
+
+#make:hover {
+  transform: scale(1.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  background-color: #d3d3d3;
+  border-color: #d3d3d3;
+  color: #2f4f4f;
 }
 
 
