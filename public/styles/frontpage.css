@@ -15,7 +15,7 @@ body {background:#232323; color:#fff}
 
 /* https://cdn7.dissolve.com/p/D1061_127_095/D1061_127_095_1200.jpg*/
 
-.content {position:relative; z-index:1; padding-top:65%; width:90%; margin:0 auto;margin-top:150px;}
+.content {position:relative; z-index:1; padding-top:65%; width:90%; margin:0 auto; margin-top:130px;}
 
 @media only screen and (min-width:36.250em) {
   .content {width:60%; padding-top:35% }
@@ -29,8 +29,8 @@ body {background:#232323; color:#fff}
   .modal-trigger{
     position: relative;
     float: right;
-    margin-top: 10px;
-    margin-right: 10px;
+    margin-top: 30px;
+    margin-right: 30px;
     background-color: black;
     font-family: American Typewriter, serif;
     font-size: 20px;
@@ -39,9 +39,19 @@ body {background:#232323; color:#fff}
   .modal-trigger:hover {
     background-color: white;
     color:black;
+    border: 1px solid black;
   }
 
-  /* .content {
-    margin-top: 50px;
-  } */
+.modal {
+  max-height: 380px;
+  max-width: 700px;
+}
+
+#submit {
+  background-size: 80px;
+}
+
+.login, .Mail, .pw {
+  background-color: white;
+}
 

@@ -9,6 +9,11 @@ var makeMeal = function () {
   window.location.href = "/meals";
 };
 
+// var makeMeal = function() {
+//     console.log("make meal was called")
+//     window.location.href =  "/make";
+// }
+ 
 
 $("#make").on("click", makeMeal);
 $("#et").on("click", eatMeal);
