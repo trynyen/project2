@@ -9,13 +9,20 @@ I'm just trying to think ahead about what this page would look like --}}
         <th>Date Made</th> 
     </thead> 
     <tbody> 
-        {{#each dbMeals}} 
+        {{#each formatted}} 
         <tr> 
             <td>{{this.id}}</td>
             <td>{{this.name}}</td> 
             <td>{{this.quantity}}</td> 
             <td>{{this.createdAt}}</a></td>
             <td><button class="btn btn-primary">Edit</button></td>  
+        </tr> 
+                <tr> 
+            <td>{{this.id}}</td>
+            <td><input type="text" id="name-{{id}}"></td> 
+            <td><input type="text" id="name-{{id}}"></td> 
+            <td>-</td> 
+            <td><button class="btn btn-dark">Submit Changes</button></td>  
         </tr> 
         {{/each}} 
     </tbody> 

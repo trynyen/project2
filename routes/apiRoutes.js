@@ -1,6 +1,8 @@
 var db = require("../models");
 var passport = require("../config/passport");
 var isAuthenticated = require("../config/middleware/isAuthenticated");
+var moment = require("moment");
+
 
 module.exports = function (app) {
   app.get("/secrets", isAuthenticated, function (req, res) {
@@ -139,7 +141,20 @@ module.exports = function (app) {
         userId : req.user.id
       }
     }).then(function (dbMeals) {
-      res.render('member', {dbMeals});
+      console.log("**************", dbMeals)
+      var formatted = [];
+      for(i=0; i<dbMeals.length; i++){
+        meal = {
+          "id" : dbMeals[i].dataValues.id,
+          "name": dbMeals[i].dataValues.name,
+          "quantity": dbMeals[i].dataValues.quantity,
+          "createdAt": moment(dbMeals[i].dataValues.createdAt).format('LLLL')
+        }
+        formatted.push(meal)
+      }
+     
+      console.log(formatted);
+      res.render('member', {formatted});
     });
   });
 
