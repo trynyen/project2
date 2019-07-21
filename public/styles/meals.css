@@ -14,7 +14,7 @@ height: 100%;
 }
 
 body {
-  background-color: #D2DBDD;
+  background-color: #5364528c;
   /* #c597809e */
   display: flex;
   display: -webkit-flex;
@@ -107,6 +107,9 @@ top: 0;
 .card:hover {
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
     transform: scale(1.10, 1.10);
+    z-index:10;
+  text-transform: none;    
+  font-size: 0;
 }
 
 .card__info {
@@ -127,6 +130,14 @@ border-bottom-right-radius: 12px;
     font-weight: 500;
   color: #868686;
 }
+
+/* .card__author:hover {
+  text-transform: none;    
+  font-size: 0;
+}
+.card__author:hover, .card__category:hover{
+  text-transform: none;
+} */
 
 .card__title {
     margin-top: 5px;
@@ -154,12 +165,33 @@ border-bottom-right-radius: 12px;
 .card:hover .card__info {
     background-color: transparent;
     position: relative;
+    content: transparent;
+    color: transparent;
+    text-transform: transparent;
 }
 
 .card:hover .card__info-hover {
     opacity: 1;
 }
 
+.card:hover .card__author {
+text-size-adjust: 0;
+font-size: 0;
+background-color: transparent;
+position: relative;
+content: transparent;
+color: transparent;
+text-transform: transparent;
+}
+.card:hover .card__category {
+  text-size-adjust: 0;
+  font-size: 0;
+  background-color: transparent;
+  position: relative;
+  content: transparent;
+  color: transparent;
+  text-transform: transparent;
+  }
 .carousel {
     overflow: hidden;
     position: relative;
@@ -230,7 +262,7 @@ border-bottom-right-radius: 12px;
   position: absolute;
   float: right;
   margin-top: -480px;
-  margin-left: 1550px;
+  margin-left: 86%;
   color: white;
   background-color: black;
   font-family: American Typewriter, serif;
@@ -270,7 +302,7 @@ border-bottom-right-radius: 12px;
   
 #mealList{
   position: absolute;
-  background: url(https://images.unsplash.com/photo-1546810685-721985021baa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80) center no-repeat no-repeat;
+  background: url(https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2094&q=80) center no-repeat no-repeat;
   background-size: 100%;
   width: 100%;
   height: 200px;
@@ -278,6 +310,7 @@ border-bottom-right-radius: 12px;
   margin-top: -300px;
   color: white;
 }
+/* https://images.unsplash.com/photo-1546810685-721985021baa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80 */
 /* https://images.unsplash.com/photo-1439300807642-1d369f8431fc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80 */
 #mealListText {
   color:#272626;

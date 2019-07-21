@@ -1,6 +1,16 @@
 {{!-- The logic/js file for this page has not been created. 
 I'm just trying to think ahead about what this page would look like --}}
-<h1>My Meals</h1>
+ <link rel="stylesheet" href="./styles/member.css">
+ <link href="https://fonts.googleapis.com/css?family=Berkshire+Swash|Crimson+Text|Faster+One|Frijole|Pacifico|Pattaya&display=swap" rel="stylesheet">
+<nav>
+   <div class="navbar">
+     {{!-- <a href=“#!” class=“brand-logo”><i class=“material-icons”>cloud</i>Logo</a> --}}
+     <a class="text-light user" href="/home"><span class="navbar-text text-light home-text">Home</span></a>
+     <a href="/logout" class="logout"><span class="navbar-text text-light logout-text">Log Out</span></a>
+   </div>
+</nav>
+<div class="mymeals"><span id="mymeals"><h1>My Meals</h1></span></div>
+{{!-- <h1>My Meals</h1> --}}
 <table class="table">
     <thead> 
         <th>Meal ID</th>
