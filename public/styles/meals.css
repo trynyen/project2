@@ -261,7 +261,7 @@ text-transform: transparent;
 .navbar{
   position: absolute;
   float: right;
-  margin-top: -480px;
+  margin-top: -400px;
   margin-left: 86%;
   color: white;
   background-color: black;
@@ -305,9 +305,9 @@ text-transform: transparent;
   background: url(https://images.unsplash.com/photo-1505935428862-770b6f24f629?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2094&q=80) center no-repeat no-repeat;
   background-size: 100%;
   width: 100%;
-  height: 200px;
+  height: 150px;
   padding-top: -100px;
-  margin-top: -300px;
+  margin-top: -250px;
   color: white;
 }
 /* https://images.unsplash.com/photo-1546810685-721985021baa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80 */
@@ -326,6 +326,6 @@ text-transform: transparent;
 .container.pick-meal {
   margin: 0 auto;
   max-width: 1280px;
-  margin-top: 55px;
+  margin-top: 35px;
   margin-left: 32.5%;
 }
