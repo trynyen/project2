@@ -11,6 +11,8 @@ I'm just trying to think ahead about what this page would look like --}}
 </nav>
 <div class="mymeals"><span id="mymeals"><h1>My Meals</h1></span></div>
 {{!-- <h1>My Meals</h1> --}}
+
+
 <table class="table">
     <thead> 
         <th>Meal ID</th>
@@ -25,15 +27,20 @@ I'm just trying to think ahead about what this page would look like --}}
             <td>{{this.name}}</td> 
             <td>{{this.quantity}}</td> 
             <td>{{this.createdAt}}</a></td>
-            <td><button class="btn btn-primary">Edit</button></td>  
-        </tr> 
-                <tr> 
+            <th><button class="btn btn-danger delete-meal" data-id={{this.id}}>Delete Meal</button></th>
+            <td><button class="btn btn-primary meal" data-id={{this.id}}>Edit</button></td>  
+        </tr class=> 
+        <tr class='number' id='number-{{this.id}}'> 
             <td>{{this.id}}</td>
             <td><input type="text" id="name-{{id}}"></td> 
-            <td><input type="text" id="name-{{id}}"></td> 
+            <td><input type="text" id="quantity-{{id}}"></td> 
             <td>-</td> 
-            <td><button class="btn btn-dark">Submit Changes</button></td>  
+            <td><button class="btn btn-dark submit" data-id={{this.id}}>Submit Changes</button></td>  
         </tr> 
         {{/each}} 
     </tbody> 
 </table> 
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+ <script src="/js/members.js"></script>
