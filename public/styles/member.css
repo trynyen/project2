@@ -31,6 +31,12 @@ h1{
     border-color: black;
 }
 
+.btn-danger{
+    color: red;
+    background-color: #ffffff;
+    border-color: red;
+}
+
 /*navbar for home page*/
 .navbar{
     position: absolute;
