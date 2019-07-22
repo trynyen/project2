@@ -1,0 +1,81 @@
+h1{
+    background-color: black;
+    width: 100%;
+    height: 45px;
+    color: white;
+    font-family: 'Crimson Text', serif;
+    margin-top:100px;
+}
+
+.btn-primary {
+    color: #000;
+    background-color: #ffffff;
+    border-color: black;
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
+.btn-dark {
+    color: white;
+    background-color: black;
+    border-color: white;
+}
+
+.btn-dark:hover {
+    color: #000;
+    background-color: #ffffff;
+    border-color: black;
+}
+
+.btn-danger{
+    color: red;
+    background-color: #ffffff;
+    border-color: red;
+}
+
+/*navbar for home page*/
+.navbar{
+    position: absolute;
+    float: right;
+    margin-top: -65px;
+    margin-left: 86%;
+    color: white;
+    background-color: black;
+    font-family: American Typewriter, serif;
+    font-size: 20px;
+  }
+  
+  /* user icon*/
+  .user{
+    position: absolute;
+    float: right;
+    margin-left: -120px; 
+    color: white;
+    background-color: black;
+    font-family: American Typewriter, serif;
+    font-size: 20px;
+    height: 40px;
+    width: 80px;
+  }
+  
+  .home-text{ 
+    position: absolute;
+    padding-left: 12px;
+    margin-top: 5px;
+  }
+  
+  /* logout icon*/
+  .logout{
+    height: 25px;
+    width: 80px;
+  }
+  
+  .logout-text{
+    position: absolute;
+    padding-left: 3px;
+    margin-top: -3px;
+  }

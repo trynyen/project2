@@ -14,11 +14,15 @@ module.exports = function (app) {
   });
 
   app.get("/meals", isAuthenticated, function (req, res) {
-    db.Meal.findAll({}).then(function (dbMeals) {
+   
+      db.Meal.findAll({}).then(function (dbMeals) {
 
 
-      res.render("meals", {dbMeals: dbMeals});
-    });
+        res.render("meals", {dbMeals: dbMeals});
+      });
+
+
+
 
   });
 
@@ -172,34 +176,53 @@ module.exports = function (app) {
 
 
 app.put("/api/meals", function(req, res) {
-  console.log("*********",req.body.mealId);
+  console.log("*********", req.body.name);
   db.Meal.findAll({where:{
     id: req.body.mealId
   }}).then(function(mealObj){
-    console.log("**************",mealObj[0].dataValues.id);
-    if(mealObj[0].dataValues.quantity <= 1) {
-      db.Meal.destroy({where: {
-        id: req.body.mealId
-      }}).then(function(deletedMeal) {
-        res.json(deletedMeal);
-      })
+    var updatedObj = {
+      "name" : req.body.name,
+      "quantity" : req.body.quantity
     }
+
     db.Meal.update(
-      {
-        "name": mealObj[0].dataValues.name,
-        "quantity": Number(mealObj[0].dataValues.quantity) -1,
-        "zip": mealObj[0].dataValues.zip,
-        "phone": mealObj[0].dataValues.phone,
-        "userId": mealObj[0].dataValues.userId
-      },
+      updatedObj,
       {
         where: {
-          id: mealObj[0].dataValues.id
+          id: req.body.mealId
         }
       }).then(function(dbPost) {
       res.json(dbPost);
       });
-  })
+
+
+
+    
+  });
+  //   console.log("**************",mealObj[0].dataValues.id);
+  //   if(mealObj[0].dataValues.quantity <= 1) {
+  //     db.Meal.destroy({where: {
+  //       id: req.body.mealId
+  //     }}).then(function(deletedMeal) {
+  //       res.json(deletedMeal);
+  //     })
+  //   }
+  //   db.Meal.update(
+  //     {
+  //       "name": mealObj[0].dataValues.name,
+  //       "quantity": Number(mealObj[0].dataValues.quantity) -1,
+  //       "zip": mealObj[0].dataValues.zip,
+  //       "phone": mealObj[0].dataValues.phone,
+  //       "userId": mealObj[0].dataValues.userId
+  //     },
+  //     {
+  //       where: {
+  //         id: mealObj[0].dataValues.id
+  //       }
+  //     }).then(function(dbPost) {
+  //     res.json(dbPost);
+  //     });
+  // })
 });
 };
 
